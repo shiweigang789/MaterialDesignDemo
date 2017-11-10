@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/scrolling_header"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@mipmap/banner3"/>
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+    <TextView
+        android:id="@+id/text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="350dp"
+        android:paddingBottom="60dp"
+        android:text="想告别起床气,快去定个闹铃吧!"
+        android:textColor="@android:color/white"
+        app:layout_anchor="@id/scrollView"
+        app:layout_anchorGravity="top|center_horizontal"
+        />
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        app:layout_behavior="@string/content_behavior">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/large_text"/>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <!--<com.github.jdsjlzx.recyclerview.LuRecyclerView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/content_behavior"
+        />-->
+
+    <ImageView
+        android:id="@+id/add_alarm_clock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/add_alarm_clock_button_pressed"
+        app:layout_anchor="@id/scrolling_header"
+        app:layout_anchorGravity="center"
+        app:layout_behavior="@string/floating_image_behavoir"
+        />
+
+
+</android.support.design.widget.CoordinatorLayout>

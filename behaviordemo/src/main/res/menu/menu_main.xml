@@ -13,4 +13,5 @@
         android:icon="@mipmap/ic_heart_outline_white_24dp"
         app:showAsAction="always"
         android:title="Favorite" />
+
 </menu>
